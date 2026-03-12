@@ -49,28 +49,32 @@ export const portfolio = {
   contributions: [],
   projects: [
     {
-      name: "Project One",
-      description: "A high-performance REST API with auth and rate limiting",
-      tech: ["Spring Boot", "PostgreSQL", "Redis"],
-      url: "#",
+      name: "HTTP Server From Scratch",
+      description:
+        "Implemented an HTTP/1.1 server from scratch using raw TCP sockets, including request parsing, routing, and response generation without relying on web frameworks.",
+      tech: ["Go", "TCP Sockets", "HTTP Protocol", "Concurrency"],
+      url: "https://github.com/anonrst/http-server",
     },
     {
-      name: "Project Two",
-      description: "Event-driven microservice for processing payments",
-      tech: ["Java", "RabbitMQ", "Docker"],
-      url: "#",
+      name: "Redis Clone",
+      description:
+        "Built an in-memory key–value store inspired by Redis, supporting core commands and efficient data structures with a custom TCP-based communication protocol.",
+      tech: ["Go", "Data Structures", "Networking", "TCP Protocol"],
+      url: "https://github.com/anonrst/redis-clone",
     },
     {
-      name: "Project Three",
-      description: "CLI tool for database migrations and schema management",
-      tech: ["Java", "SQL"],
-      url: "#",
+      name: "Travisto",
+      description:
+        "Developed a travel planning platform that allows users to discover destinations, manage itineraries, and organize travel information through a structured backend-driven interface.",
+      tech: ["Java", "Spring Boot", "REST APIs", "Database"],
+      url: "https://github.com/anonrst/travisto",
     },
     {
-      name: "Project Four",
-      description: "Real-time WebSocket server for live notifications",
-      tech: ["Spring Boot", "Redis", "WebSocket"],
-      url: "#",
+      name: "Repo Seller",
+      description:
+        "Built a platform for listing and sharing code repositories, enabling users to showcase projects, explore others' work, and manage repository listings.",
+      tech: ["Java", "Spring Boot", "Web Backend", "Database"],
+      url: "https://github.com/anonrst/repo-seller",
     },
   ],
 };
