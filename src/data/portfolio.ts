@@ -61,20 +61,6 @@ export const portfolio = {
         "Built an in-memory key–value store inspired by Redis, supporting core commands and efficient data structures with a custom TCP-based communication protocol.",
       tech: ["Go", "Data Structures", "Networking", "TCP Protocol"],
       url: "https://github.com/anonrst/redis-clone",
-    },
-    {
-      name: "Travisto",
-      description:
-        "Developed a travel planning platform that allows users to discover destinations, manage itineraries, and organize travel information through a structured backend-driven interface.",
-      tech: ["Java", "Spring Boot", "REST APIs", "Database"],
-      url: "https://github.com/anonrst/travisto",
-    },
-    {
-      name: "Repo Seller",
-      description:
-        "Built a platform for listing and sharing code repositories, enabling users to showcase projects, explore others' work, and manage repository listings.",
-      tech: ["Java", "Spring Boot", "Web Backend", "Database"],
-      url: "https://github.com/anonrst/repo-seller",
-    },
+    }
   ],
 };
