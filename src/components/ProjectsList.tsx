@@ -38,7 +38,7 @@ const ProjectsList = () => {
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="font-mono text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded"
+                    className="font-mono text-xs whitespace-nowrap text-muted-foreground bg-secondary px-2 py-0.5 rounded"
                   >
                     {t}
                   </span>
