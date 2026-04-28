@@ -147,11 +147,26 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improve text rendering on mobile */
+  @media (max-width: 768px) {
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
   }
 
   ::selection {
     background: hsl(20 10% 12% / 0.1);
     color: hsl(20 10% 8%);
+  }
+
+  /* Smooth transitions for all interactive elements */
+  a, button {
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -169,6 +184,14 @@
     background-attachment: fixed;
     position: relative;
     isolation: isolate;
+  }
+
+  /* Mobile optimization for background */
+  @media (max-width: 768px) {
+    .page-bg {
+      background-attachment: scroll;
+      background-size: cover;
+    }
   }
 
   .page-bg::before {
@@ -190,5 +213,64 @@
     box-shadow: 0 14px 40px hsl(25 30% 12% / 0.12);
     backdrop-filter: blur(18px) saturate(160%);
     -webkit-backdrop-filter: blur(18px) saturate(160%);
+  }
+
+  /* Mobile optimization for glass panels */
+  @media (max-width: 640px) {
+    .glass-panel {
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+    }
+  }
+
+  /* Better touch targets for mobile */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Improve performance on mobile */
+  @media (max-width: 768px) {
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
   }
 }
