@@ -66,7 +66,7 @@ const HeroSection = () => {
   }, [displayed, isDeleting, roleIndex]);
 
   return (
-    <section className="px-4 sm:px-6 md:px-16 lg:px-24 pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16">
+    <section className="px-4 sm:px-6 md:px-16 lg:px-24 pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16" aria-label="Hero section">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 sm:gap-8">
         {/* Left — Interactive Name & Typing Tagline */}
         <div
@@ -108,22 +108,26 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-muted-foreground text-base sm:text-lg mt-3 max-w-md font-mono break-words"
+            role="status"
+            aria-live="polite"
           >
             {displayed}
             <motion.span
               animate={{ opacity: [1, 0] }}
               transition={{ repeat: Infinity, duration: 0.6 }}
               className="inline-block w-[2px] h-4 sm:h-5 bg-primary ml-0.5 align-middle"
+              aria-hidden="true"
             />
           </motion.p>
         </div>
 
         {/* Right — Social Icons with hover glow */}
-        <motion.div
+        <motion.nav
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
           className="flex gap-3 sm:gap-4 flex-shrink-0"
+          aria-label="Social media links"
         >
           {portfolio.socials.map(({ href, label, Icon }) => (
             <motion.a
@@ -136,10 +140,10 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               className="p-2.5 sm:p-3 rounded-full glass-panel hover:bg-primary hover:text-primary-foreground hover:shadow-lg transition-all duration-200 touch-manipulation"
             >
-              <Icon size={18} className="sm:w-5 sm:h-5" />
+              <Icon size={18} className="sm:w-5 sm:h-5" aria-hidden="true" />
             </motion.a>
           ))}
-        </motion.div>
+        </motion.nav>
       </div>
     </section>
   );
