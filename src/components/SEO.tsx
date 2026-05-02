@@ -17,7 +17,7 @@ const SEO = ({
   description = "Spring Boot Java focused engineer specializing in backend development, microservices, and scalable systems. Experienced with Java, Spring Boot, Docker, PostgreSQL, Redis, and building production-grade APIs.",
   keywords = "Spring Boot Developer, Java Engineer, Backend Developer, Microservices, REST API, Docker, PostgreSQL, Redis, Kafka, System Design, Software Engineer",
   ogImage = "https://storage.googleapis.com/gpt-engineer-file-uploads/XrccRxK1upN7ap7zms8QxHxcOJp2/social-images/social-1772790342651-WIN_20260223_15_37_04_Pro.webp",
-  canonicalUrl = "https://yourportfolio.com/"
+  canonicalUrl = "https://anonrst311.vercel.app/"
 }: SEOProps) => {
   useEffect(() => {
     // Update title
