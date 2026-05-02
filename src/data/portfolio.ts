@@ -53,21 +53,21 @@ projects: [
       description:
         "Engineered a production-grade HTTP/1.1 server in Go from bare TCP socket primitives with zero third-party dependencies, featuring a manual request parser, custom routing engine, static file serving, chunked video streaming, and concurrent request handling via goroutines.",
       tech: ["Go", "TCP Sockets", "HTTP/1.1", "Goroutines", "Concurrency"],
-      url: "https://github.com/anonrst/http-server",
+      url: "https://github.com/anonrst/Http-server-from-scratch",
     },
     {
       name: "TLS Implementation From Scratch",
       description:
         "Built a TLS protocol implementation in Go from scratch without external cryptographic libraries, covering the full handshake flow, certificate exchange simulation, symmetric encryption, message integrity checks, and secure end-to-end communication over a custom TCP transport.",
       tech: ["Go", "TLS", "TCP Sockets", "Cryptography", "Symmetric Encryption"],
-      url: "https://github.com/anonrst/tls-implementation",
+      url: "https://github.com/anonrst/TCP-TLS-implementation",
     },
     {
       name: "Distributed Deployment Platform",
       description:
         "Building a microservices-based deployment platform in Java Spring Boot for hosting and managing user applications in isolated Docker container environments, with MinIO for object storage, Kafka for async event processing, Redis for caching, and PostgreSQL for persistent metadata storage.",
       tech: ["Java", "Spring Boot", "Microservices", "Docker", "Kafka", "Redis", "PostgreSQL", "MinIO"],
-      url: "https://github.com/anonrst/deployment-platform",
+      url: "https://github.com/anonrst/deployer-codebase",
     },
   ],
 };
