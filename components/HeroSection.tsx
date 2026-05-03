@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { portfolio } from "@/data/portfolio";

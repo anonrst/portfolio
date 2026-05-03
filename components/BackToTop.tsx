@@ -1,4 +1,6 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+"use client";
+
+import { motion, useScroll } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
