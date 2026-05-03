@@ -1,5 +1,10 @@
 import { Github, Linkedin } from "lucide-react";
 
+type Contribution = {
+  project: string;
+  description: string;
+};
+
 export const portfolio = {
   name: "Anon",
   title: "Spring Boot Java Focused Engineer",
@@ -46,7 +51,7 @@ export const portfolio = {
     education: "Your Degree, University",
     interests: ["Open Source", "System Design", "DevOps"],
   },
-  contributions: [],
+  contributions: [] as Contribution[],
 projects: [
     {
       name: "HTTP Server From Scratch",

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import "@/index.css";
+import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Anon - Spring Boot Java Engineer | Backend Developer Portfolio",
@@ -97,11 +94,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          {children}
-        </TooltipProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

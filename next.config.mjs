@@ -4,9 +4,12 @@ const nextConfig = {
   images: {
     domains: ['ghchart.rshah.org', 'storage.googleapis.com'],
   },
-  // Enable static export for better SEO
-  output: 'export',
-  trailingSlash: true,
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
 };
 
 export default nextConfig;
